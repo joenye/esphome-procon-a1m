@@ -8,15 +8,15 @@ substitutions:
 # Currently supported languages are en, nl. 
 # ESP32 is a mh-et-live (v1 version of my pcb) and esp32s3 is a lilygo ESP32S3-T7 (v2 version of my pcb)
 # Be carefull not to upload the wrong code to the wrong chip. This could brick your ESP chip.
-packages:
-  remote_package:
-    url: https://github.com/fonske/Mitsubishi_procon
-    ref: main
-    refresh: 0s
-    files: [ esphome/labels/.procon-labels-en.yaml, 
-             esphome/.procon.base.yaml, 
-             esphome/boards/board-esp32.yaml 
-           ]
+# packages:
+#   remote_package:
+#     url: https://github.com/fonske/Mitsubishi_procon
+#     ref: main
+#     refresh: 0s
+#     files: [ esphome/labels/.procon-labels-en.yaml, 
+#              esphome/.procon.base.yaml, 
+#              esphome/boards/board-esp32.yaml 
+#            ]
       ## Language Packs:
       # esphome/labels/.procon-labels-en.yaml
       # esphome/labels/.procon-labels-nl.yaml
@@ -39,10 +39,10 @@ packages:
       ###
 
 ## for developing/testing, uncomment local includes and comment out remote_package part.
-#packages:
-#  substitutions: !include labels/.procon-labels-nl.yaml
-#  device_base1:  !include .procon.base.yaml
-#  device_base2:  !include boards/board-esp32.yaml
+packages:
+ substitutions: !include labels/.procon-labels-en.yaml
+ device_base1:  !include .procon.base.yaml
+ device_base2:  !include boards/board-esp32.yaml
 #  device_base2:  !include boards/board-esp32S3.yaml
 #  device_base2:  !include boards/board-m5stack-atom.yaml
 
