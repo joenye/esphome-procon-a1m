@@ -2,7 +2,7 @@ substitutions:
   name: mitsubishi
   device_description: "Esphome component for Mitsubishi Procon A1M mini with modbus"
   friendly_name: Mitsubishi
-  timezone: "Europe/Amsterdam"
+  timezone: "Europe/London"
 
 # In order to use other language or a different ESP chip, fix include labels file name below:
 # Currently supported languages are en, nl. 
